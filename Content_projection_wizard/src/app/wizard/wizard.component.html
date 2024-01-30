@@ -1,0 +1,15 @@
+<!-- wizard.component.html -->
+<div class="wizard">
+    <div class="wizard-inner">
+      <div class="connecting-line"></div>
+      
+    </div>
+    <div class="tab-content">
+      <ng-content></ng-content>
+    </div>
+    <div class="buttons">
+      <button *ngIf="currentStepIndex > 0" (click)="goToPreviousStep()">Previous</button>
+      <button *ngIf="currentStepIndex < steps.length - 1" (click)="goToNextStep()">Next</button>
+    </div>
+  </div>
+  
