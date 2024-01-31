@@ -16,6 +16,15 @@ export class WizardComponent implements AfterContentInit {
     this.steps.toArray()[this.currentStepIndex].isActive = true;
   }
 
+  show(i:any){
+    
+      this.steps.toArray()[this.currentStepIndex].isActive = false;
+      this.currentStepIndex=i;
+      this.steps.toArray()[this.currentStepIndex].isActive = true;
+    
+
+  }
+
   goToNextStep() {
     if (this.currentStepIndex < this.steps.length - 1) {
       this.steps.toArray()[this.currentStepIndex].isActive = false;

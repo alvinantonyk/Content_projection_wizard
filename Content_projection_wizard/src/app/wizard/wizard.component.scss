@@ -2,10 +2,24 @@ button{
     padding: 5px 10px;
     
 }
+.nav{
+    display: flex;
+    
+    justify-content: space-between;
+}
 
 .buttons{
     width: 200px;
     margin: auto;
     display: flex;
     justify-content: space-between;
+}
+
+.wizardlinks{
+    
+    width: 30px;
+    height: 30px;
+    background-color:lawngreen;
+    border-radius:50%;
+    padding: 10px ;
 }

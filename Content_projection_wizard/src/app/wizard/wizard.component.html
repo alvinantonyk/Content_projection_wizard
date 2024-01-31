@@ -2,7 +2,15 @@
 <div class="wizard">
     <div class="wizard-inner">
       <div class="connecting-line"></div>
-      
+      <div class="nav nav-tabs" role="tablist">
+        <div  *ngFor="let step of steps; let i = index" [class.active]="step.isActive">
+           <a class="wizardlinks" href="javascript:void(0)" (click)="show(i)">
+
+                {{ i + 1 }}
+         
+        </a>
+    </div>
+</div>
     </div>
     <div class="tab-content">
       <ng-content></ng-content>
