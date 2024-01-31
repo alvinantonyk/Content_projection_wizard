@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class WizardStepComponent {
   @Input() isActive = false;
+  @Input() initActive=false;
 }
