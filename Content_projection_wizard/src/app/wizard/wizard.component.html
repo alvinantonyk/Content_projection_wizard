@@ -4,12 +4,14 @@
       <div class="connecting-line"></div>
       <div class="nav nav-tabs" role="tablist">
         <div  *ngFor="let step of steps; let i = index">
-           <a class="wizardlinks" href="javascript:void(0)" (click)="show(i)">
+           <a class="wizardlinks" href="javascript:void(0)" (click)="show(i)" [class.active]="currentStepIndex == i">
 
-                {{ i + 1 }}
+                
+                <i class={{icon_classes[i]}}></i>
          
         </a>
         <div class="arrow" *ngIf="currentStepIndex==i">
+          <i class="fa fa-arrow-up"></i>
             
         </div>
     </div>

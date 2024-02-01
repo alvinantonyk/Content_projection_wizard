@@ -13,6 +13,8 @@ export class WizardComponent implements AfterContentInit {
   @ContentChildren(WizardStepComponent) steps!: QueryList<WizardStepComponent>;
   currentStepIndex = 0;
 
+  icon_classes=["fas fa-user fa-lg","fas fa-envelope","fas fa-lock","fas fa-check"]
+
   ngAfterContentInit() {
     this.steps.toArray()[this.currentStepIndex].isActive = true;
     this.steps.toArray()[this.currentStepIndex].initActive=true
